@@ -1,5 +1,5 @@
 class PigLatinizer
-  def piglatinize(phrase)
+  def self.piglatinize(phrase)
     phrase.split(' ').map do |word|
       piglatinize_word(word)
     end.join(' ')
