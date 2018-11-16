@@ -6,6 +6,6 @@ class App < Sinatra::Base
   end
 
   post '/' do
-    "#{Piglatinizer.new.piglatinize(params[:user_phrase])}""
+    "#{Piglatinizer.new.piglatinize(params[:user_phrase])}"
   end
 end
