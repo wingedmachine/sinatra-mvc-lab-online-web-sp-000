@@ -7,6 +7,10 @@ class PigLatinizer
 
   def piglatinize_word(word)
     first_vowel_index = word.index(/[aeiouAEIOU]/)
-    "#{word[(first_vowel_index..word.length)]}#{word[0..first_vowel_index-1]}ay"
+    if first_vowel_index == 0
+      "#{word}ay"
+    else
+      "#{word[(first_vowel_index..word.length)]}#{word[0..first_vowel_index-1]}ay"
+    end
   end
 end
